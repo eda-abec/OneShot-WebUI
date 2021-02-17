@@ -1,0 +1,111 @@
+/*
+ * style.css
+ * part of WebUI for OneShot
+ * author eda-abec, (c) 2021
+ *
+ *
+ * values surrounded by '@' are to be filled at runtime
+ */
+
+body {
+    background-color: @color_bg_dark@;
+    font-family: monospace, monospace;
+}
+
+a {
+    text-decoration: none;
+    color: @color_text@;
+/*   not using this is deliberate. Without forcing, it highlights already clicked nets   */
+/*   color: black; */
+}
+
+a:link {
+    color: inherit;
+}
+
+/* Floating Action Button */
+#fab {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: @color_accent@;
+    color: white;
+    border-radius: 50px;
+    text-align: center;
+    vertical-align: middle;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.32);
+    cursor: pointer;
+    font-size: 40px;
+    z-index: 999;
+}
+
+table {
+    margin: 0;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -35%);
+    
+    background-color: @color_bg@;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.12);
+    border: none;
+    padding: 8px;
+}
+
+table #header {
+    background-color: @color_primary@;
+}
+table #header * {
+    background-color: @color_primary@;
+    border-radius: 0px;
+    color: white;
+    font-weight: bold;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+td {
+    border: none;
+    border-radius: 50px;
+}
+
+td a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.flags {
+    text-shadow: 0 0 0 @color_bg_dark@;
+    font-size: 20px;
+    color: transparent;
+}
+
+
+
+#logareaWrapper {
+/* TODO this still needs work */
+
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0);
+
+/*  TODO border around    */
+/*     padding: 16px; */
+    width: 96%;
+    min-height: 96%;
+    word-wrap: break-word;
+    background-color: @color_bg@;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0,0.12);
+}
+
+#logarea {
+    padding: 16px;
+    background-color: @color_bg@;
+}
